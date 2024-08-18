@@ -87,7 +87,7 @@ def run_socket_server():
         with open(data_file, 'r') as f:
             all_data = json.load(f)
         all_data[timestamp] = message
-        with open(data_file, 'w') as f:
+        with open(data_file, 'a') as f:
             json.dump(all_data, f, indent=4)
 
 
